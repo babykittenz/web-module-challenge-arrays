@@ -213,7 +213,7 @@ Use the getAverageWordLength function below to do the following:
 */
 
 function getAverageWordLength(array){
-  /*code here*/
+  
   let wordCount = 0;
   
   
@@ -223,7 +223,7 @@ function getAverageWordLength(array){
     let my_string = array[index];
     let spaceCount = (my_string.split(" ").length - 1);
     return spaceCount;
-  }
+  } // end theSpaceCount
  
 
 
@@ -231,24 +231,27 @@ function getAverageWordLength(array){
  
   for(let i = 0; i < array.length; i++){
 
+    
    
+
       
     if (theSpaceCount(array, i) <= 0){
       wordCount++;
-    } else if (theSpaceCount(array,i) >= 1 && theSpaceCount(array,i) < 2){
-      wordCount += 2;
-    } else if (theSpaceCount(array,i) >= 2 && theSpaceCount(array,i) < 3){
-      wordCount += 3;
-    }
-  
-  
-  }
+    } else if (theSpaceCount(array,i) > 0){
+      for(let x = 0; x < theSpaceCount(array,x); x++){
+        wordCount += theSpaceCount(array, i);
+      }//end for x
+    
+
+    }// end if 
+  } // end for i
   let arrayLength = array.length;
   let averageNumber = wordCount/arrayLength;
   return averageNumber;
-}
+}// end of getAverageWord Length
 
 console.log('Task 8', getAverageWordLength(originalFlavors));
+console.log(originalFlavors.length);
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
