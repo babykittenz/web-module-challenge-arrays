@@ -181,7 +181,7 @@ console.log('Task 7', filterByWord(originalFlavors, 'Chocolate'));
 Use the getAverageWordLength function below to do the following:
   1. Receive the originalFlavors array
   2. Count how many words per item in the array
-  3. Return the average number of words per item in the array
+  3. Return the average number of w ords per item in the array
 
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
