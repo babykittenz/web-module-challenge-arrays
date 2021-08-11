@@ -343,7 +343,7 @@ const regionalFlavors = [
 function getRandomFlavors(array1, array2, array3, array4){
   /*code here*/
 
- let randomFlavors = [array1[Math.round(Math.random()*array1.length)], array2[Math.round(Math.random()*array2.length)], array3[Math.round(Math.random()*array3.length)], array4[Math.round(Math.random()*array4.length)]];
+ let randomFlavors = [array1[Math.floor(Math.round(Math.random()*array1.length))], array2[Math.floor(Math.round(Math.random()*array2.length))], array3[Math.floor(Math.round(Math.random()*array3.length))], array4[Math.floor(Math.round(Math.random()*array4.length))]];
   return randomFlavors;
 }
 
