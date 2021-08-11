@@ -207,14 +207,48 @@ console.log('Task 7', filterByWord(originalFlavors, 'Chocolate'));
 Use the getAverageWordLength function below to do the following:
   1. Receive the originalFlavors array
   2. Count how many words per item in the array
-  3. Return the average number of w ords per item in the array
+  3. Return the average number of words per item in the array
 
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
+function getAverageWordLength(array){
   /*code here*/
+  let wordCount = 0;
+  
+  
+ 
+  
+  function theSpaceCount(arrayList, index) {
+    let my_string = array[index];
+    let spaceCount = (my_string.split(" ").length - 1);
+    return spaceCount;
+  }
+ 
+
+
+  
+ 
+  for(let i = 0; i < array.length; i++){
+
+   
+      
+    if (theSpaceCount(array, i) <= 0){
+      wordCount++;
+    } else if (theSpaceCount(array,i) >= 1 && theSpaceCount(array,i) < 2){
+      wordCount += 2;
+    } else if (theSpaceCount(array,i) >= 2 && theSpaceCount(array,i) < 3){
+      wordCount += 3;
+    }
+  
+  
+  }
+  let arrayLength = array.length;
+  let averageNumber = wordCount/arrayLength;
+  return averageNumber;
 }
+
+console.log('Task 8', getAverageWordLength(originalFlavors));
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
